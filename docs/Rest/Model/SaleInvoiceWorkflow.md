@@ -1,0 +1,52 @@
+# # SaleInvoiceWorkflow
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**created** | **\DateTime** |  | [optional]
+**modified** | **\DateTime** |  | [optional]
+**id** | **int** |  |
+**type** | **string** |  | [optional]
+**name** | **string** |  | [optional]
+**memo** | **string** |  | [optional]
+**deleted** | **bool** |  | [optional]
+**payment_conditions** | **string** |  | [optional]
+**sale_invoice_default_delivery_method** | **string** |  | [optional]
+**sale_invoice_email_subject** | **string** |  | [optional]
+**sale_invoice_email_text** | **string** |  | [optional]
+**sale_invoice_due_interval** | **int** |  | [optional]
+**use_direct_debit** | **bool** |  | [optional]
+**direct_debit_payment_conditions** | **string** |  | [optional]
+**direct_debit_default_delivery_method** | **string** |  | [optional]
+**direct_debit_email_subject** | **string** |  | [optional]
+**direct_debit_email_text** | **string** |  | [optional]
+**direct_debit_due_interval** | **int** |  | [optional]
+**first_reminder_enabled** | **bool** |  | [optional]
+**first_reminder_email_text** | **string** |  | [optional]
+**first_reminder_email_subject** | **string** |  | [optional]
+**first_reminder_auto_send** | **bool** |  | [optional]
+**first_reminder_due_interval** | **int** |  | [optional]
+**first_reminder_auto_send_in_days** | **int** |  | [optional]
+**second_reminder_enabled** | **bool** |  | [optional]
+**second_reminder_email_text** | **string** |  | [optional]
+**second_reminder_email_subject** | **string** |  | [optional]
+**second_reminder_due_interval** | **int** |  | [optional]
+**second_reminder_auto_send** | **bool** |  | [optional]
+**second_reminder_auto_send_in_days** | **int** |  | [optional]
+**last_reminder_enabled** | **bool** |  | [optional]
+**last_reminder_email_text** | **string** |  | [optional]
+**last_reminder_email_subject** | **string** |  | [optional]
+**last_reminder_due_interval** | **int** |  | [optional]
+**last_reminder_auto_send** | **bool** |  | [optional]
+**last_reminder_auto_send_in_days** | **int** |  | [optional]
+**paid_send_email** | **bool** |  | [optional]
+**paid_email** | **string** |  | [optional]
+**paid_email_subject** | **string** |  | [optional]
+**direct_debit_paid_send_email** | **bool** |  | [optional]
+**direct_debit_paid_email** | **string** |  | [optional]
+**direct_debit_storno_send_email** | **bool** |  | [optional]
+**direct_debit_storno_email** | **string** |  | [optional]
+**direct_debit_storno_email_subject** | **string** |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
