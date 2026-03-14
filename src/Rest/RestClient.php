@@ -28,7 +28,7 @@ readonly class RestClient
             return true;
         }
 
-        if (($page->getPrevNum() + 1) * self::DEFAULT_PAGE_SIZE > $limit) {
+        if (($page->getPrevNum() + 1) * self::DEFAULT_PAGE_SIZE >= $limit) {
             return false;
         }
 
@@ -41,6 +41,7 @@ readonly class RestClient
         $page = null;
         $result = array();
         while (self::isRequestingAllowed($page, $limit)) {
+            $args['page'] = $pageNumber;
             $page = $apiMethod(...$args);
             $result = array_merge($result, $page->getData());
             $pageNumber++;
@@ -741,7 +742,7 @@ readonly class RestClient
     {
         $api = new Api\EventsApi;
         $callback = [$api, 'v30EventsGet'];
-        return $this->depaginate($callback, $limit, $category_id, $period_filter, $published, $participation_billing_enabled, $participating_member_id, $socie_app_id, $member_id, $order);
+        return $this->depaginate($callback, $limit, category_id: $category_id, period_filter: $period_filter, published: $published, participation_billing_enabled: $participation_billing_enabled, participating_member_id: $participating_member_id, socie_app_id: $socie_app_id, member_id: $member_id, order: $order);
     }
 
     /**
