@@ -63,7 +63,7 @@ readonly class RestClient
     {
         $api = new Api\BackgroundProcessesApi;
         $callback = [$api, 'v30BackgroundProcessesGet'];
-        return $this->depaginate($callback, $limit, $state, $created, $modified, $order);
+        return $this->depaginate($callback, $limit, state: $state, created: $created, modified: $modified, order: $order);
     }
 
     /**
@@ -106,7 +106,7 @@ readonly class RestClient
     {
         $api = new Api\BankMutationsApi;
         $callback = [$api, 'v30BankGet'];
-        return $this->depaginate($callback, $limit, $period_filter, $status, $mutation_type, $bank_import_id, $bank_statement_id, $bank_mutation_id, $order);
+        return $this->depaginate($callback, $limit, period_filter: $period_filter, status: $status, mutation_type: $mutation_type, bank_import_id: $bank_import_id, bank_statement_id: $bank_statement_id, bank_mutation_id: $bank_mutation_id, order: $order);
     }
 
     /**
@@ -167,7 +167,7 @@ readonly class RestClient
     {
         $api = new Api\BlogsApi;
         $callback = [$api, 'v30BlogsAuthorsGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -234,7 +234,7 @@ readonly class RestClient
     {
         $api = new Api\BlogsApi;
         $callback = [$api, 'v30BlogsGet'];
-        return $this->depaginate($callback, $limit, $period_filter, $author_id, $issue_id, $category_id, $published, $visibility, $order);
+        return $this->depaginate($callback, $limit, period_filter: $period_filter, author_id: $author_id, issue_id: $issue_id, category_id: $category_id, published: $published, visibility: $visibility, order: $order);
     }
 
     /**
@@ -391,7 +391,7 @@ readonly class RestClient
     {
         $api = new Api\BlogsApi;
         $callback = [$api, 'v30BlogsCategoriesGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -452,7 +452,7 @@ readonly class RestClient
     {
         $api = new Api\BlogsApi;
         $callback = [$api, 'v30BlogsIssuesGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -513,7 +513,7 @@ readonly class RestClient
     {
         $api = new Api\CareerPartnersApi;
         $callback = [$api, 'v30CareerPartnersCategoriesGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -575,7 +575,7 @@ readonly class RestClient
     {
         $api = new Api\CareerPartnersApi;
         $callback = [$api, 'v30CareerPartnersGet'];
-        return $this->depaginate($callback, $limit, $career_partner_category_id, $order);
+        return $this->depaginate($callback, $limit, career_partner_category_id: $career_partner_category_id, order: $order);
     }
 
     /**
@@ -636,7 +636,7 @@ readonly class RestClient
     {
         $api = new Api\CommunicationApi;
         $callback = [$api, 'v30CommunicationSavedRepliesGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -697,7 +697,7 @@ readonly class RestClient
     {
         $api = new Api\CountriesApi;
         $callback = [$api, 'v30CountriesGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -722,7 +722,7 @@ readonly class RestClient
     {
         $api = new Api\EventCategoriesApi;
         $callback = [$api, 'v30EventCategoriesGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -809,7 +809,7 @@ readonly class RestClient
     {
         $api = new Api\EventsApi;
         $callback = [$api, 'v30EventsObjIdParticipationsGet'];
-        return $this->depaginate($callback, $limit, $obj_id, $event_id, $status, $has_invoice, $sale_invoice_status, $member_id, $order);
+        return $this->depaginate($callback, $limit, obj_id: $obj_id, event_id: $event_id, status: $status, has_invoice: $has_invoice, sale_invoice_status: $sale_invoice_status, member_id: $member_id, order: $order);
     }
 
     /**
@@ -929,7 +929,7 @@ readonly class RestClient
     {
         $api = new Api\EventsApi;
         $callback = [$api, 'v30EventsObjIdTicketTypesGet'];
-        return $this->depaginate($callback, $limit, $obj_id, $is_available_for_members, $is_available_for_external, $availability_status, $order);
+        return $this->depaginate($callback, $limit, obj_id: $obj_id, is_available_for_members: $is_available_for_members, is_available_for_external: $is_available_for_external, availability_status: $availability_status, order: $order);
     }
 
     /**
@@ -1006,7 +1006,7 @@ readonly class RestClient
     {
         $api = new Api\FiltersApi;
         $callback = [$api, 'v30FiltersGet'];
-        return $this->depaginate($callback, $limit, $type, $order);
+        return $this->depaginate($callback, $limit, type: $type, order: $order);
     }
 
     /**
@@ -1035,7 +1035,7 @@ readonly class RestClient
     {
         $api = new Api\FormsApi;
         $callback = [$api, 'v30FormsFormIdEntriesGet'];
-        return $this->depaginate($callback, $limit, $form_id, $period, $status, $is_archived, $order);
+        return $this->depaginate($callback, $limit, form_id: $form_id, period: $period, status: $status, is_archived: $is_archived, order: $order);
     }
 
     /**
@@ -1062,7 +1062,7 @@ readonly class RestClient
     {
         $api = new Api\FormsApi;
         $callback = [$api, 'v30FormsFormIdFieldsGet'];
-        return $this->depaginate($callback, $limit, $form_id, $order);
+        return $this->depaginate($callback, $limit, form_id: $form_id, order: $order);
     }
 
     /**
@@ -1101,7 +1101,7 @@ readonly class RestClient
     {
         $api = new Api\FormsApi;
         $callback = [$api, 'v30FormsGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -1151,7 +1151,7 @@ readonly class RestClient
     {
         $api = new Api\GalleriesApi;
         $callback = [$api, 'v30GalleriesAlbumsGet'];
-        return $this->depaginate($callback, $limit, $socie_app, $order);
+        return $this->depaginate($callback, $limit, socie_app: $socie_app, order: $order);
     }
 
     /**
@@ -1177,7 +1177,7 @@ readonly class RestClient
     {
         $api = new Api\GalleriesApi;
         $callback = [$api, 'v30GalleriesAlbumsAlbumIdPhotosGet'];
-        return $this->depaginate($callback, $limit, $album_id, $order);
+        return $this->depaginate($callback, $limit, album_id: $album_id, order: $order);
     }
 
     /**
@@ -1203,7 +1203,7 @@ readonly class RestClient
     {
         $api = new Api\GroupFoldersApi;
         $callback = [$api, 'v30GroupFoldersRecursiveGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -1218,7 +1218,7 @@ readonly class RestClient
     {
         $api = new Api\GroupFoldersApi;
         $callback = [$api, 'v30GroupFoldersGet'];
-        return $this->depaginate($callback, $limit, $published, $parent_id, $order);
+        return $this->depaginate($callback, $limit, published: $published, parent_id: $parent_id, order: $order);
     }
 
     /**
@@ -1284,7 +1284,7 @@ readonly class RestClient
     {
         $api = new Api\GroupsApi;
         $callback = [$api, 'v30GroupsGet'];
-        return $this->depaginate($callback, $limit, $published, $folder_id, $member_id, $socie_app_id, $term, $order);
+        return $this->depaginate($callback, $limit, published: $published, folder_id: $folder_id, member_id: $member_id, socie_app_id: $socie_app_id, term: $term, order: $order);
     }
 
     /**
@@ -1335,7 +1335,7 @@ readonly class RestClient
     {
         $api = new Api\GroupsApi;
         $callback = [$api, 'v30GroupsMembershipsGet'];
-        return $this->depaginate($callback, $limit, $group_id, $member_id, $order);
+        return $this->depaginate($callback, $limit, group_id: $group_id, member_id: $member_id, order: $order);
     }
 
     /**
@@ -1400,7 +1400,7 @@ readonly class RestClient
     {
         $api = new Api\LogsApi;
         $callback = [$api, 'v30TasksGet'];
-        return $this->depaginate($callback, $limit, $author_id, $assignee_id, $subject_type, $is_completed, $order);
+        return $this->depaginate($callback, $limit, author_id: $author_id, assignee_id: $assignee_id, subject_type: $subject_type, is_completed: $is_completed, order: $order);
     }
 
     /**
@@ -1440,7 +1440,7 @@ readonly class RestClient
     {
         $api = new Api\MemberStatusesApi;
         $callback = [$api, 'v30MemberStatusesGet'];
-        return $this->depaginate($callback, $limit, $archived, $hidden, $deceased, $order);
+        return $this->depaginate($callback, $limit, archived: $archived, hidden: $hidden, deceased: $deceased, order: $order);
     }
 
     /**
@@ -1489,7 +1489,7 @@ readonly class RestClient
     {
         $api = new Api\MembersApi;
         $callback = [$api, 'v30MembersCustomFieldsGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -1529,7 +1529,7 @@ readonly class RestClient
     {
         $api = new Api\MembersApi;
         $callback = [$api, 'v30MembersMemberIdLogsGet'];
-        return $this->depaginate($callback, $limit, $member_id, $author_id, $type, $order);
+        return $this->depaginate($callback, $limit, member_id: $member_id, author_id: $author_id, type: $type, order: $order);
     }
 
     /**
@@ -1597,7 +1597,7 @@ readonly class RestClient
     {
         $api = new Api\MembersApi;
         $callback = [$api, 'v30MembersGet'];
-        return $this->depaginate($callback, $limit, $username, $status_id, $socie_app_id, $order, $context);
+        return $this->depaginate($callback, $limit, username: $username, status_id: $status_id, socie_app_id: $socie_app_id, order: $order, context: $context);
     }
 
     /**
@@ -1661,7 +1661,7 @@ readonly class RestClient
     {
         $api = new Api\MembersApi;
         $callback = [$api, 'v30MembersObjIdStatusesGet'];
-        return $this->depaginate($callback, $limit, $obj_id, $order);
+        return $this->depaginate($callback, $limit, obj_id: $obj_id, order: $order);
     }
 
     /**
@@ -1726,7 +1726,7 @@ readonly class RestClient
     {
         $api = new Api\MembersApi;
         $callback = [$api, 'v30MembersSearchGet'];
-        return $this->depaginate($callback, $limit, $term, $order);
+        return $this->depaginate($callback, $limit, term: $term, order: $order);
     }
 
     /**
@@ -1742,7 +1742,7 @@ readonly class RestClient
     {
         $api = new Api\NewsApi;
         $callback = [$api, 'v30NewsObjIdLogsGet'];
-        return $this->depaginate($callback, $limit, $obj_id, $author_id, $type, $order);
+        return $this->depaginate($callback, $limit, obj_id: $obj_id, author_id: $author_id, type: $type, order: $order);
     }
 
     /**
@@ -1810,7 +1810,7 @@ readonly class RestClient
     {
         $api = new Api\NewsApi;
         $callback = [$api, 'v30NewsGet'];
-        return $this->depaginate($callback, $limit, $period_filter, $actual, $comments_open, $visibility, $order);
+        return $this->depaginate($callback, $limit, period_filter: $period_filter, actual: $actual, comments_open: $comments_open, visibility: $visibility, order: $order);
     }
 
     /**
@@ -1871,7 +1871,7 @@ readonly class RestClient
     {
         $api = new Api\NotificationsApi;
         $callback = [$api, 'v30NotificationsGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -1884,7 +1884,7 @@ readonly class RestClient
     {
         $api = new Api\OrganisationsApi;
         $callback = [$api, 'v30OrganisationsCategoriesGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -1950,7 +1950,7 @@ readonly class RestClient
     {
         $api = new Api\OrganisationsApi;
         $callback = [$api, 'v30OrganisationsGet'];
-        return $this->depaginate($callback, $limit, $category_id, $sbi_code, $legal_form, $member_id, $publication, $order);
+        return $this->depaginate($callback, $limit, category_id: $category_id, sbi_code: $sbi_code, legal_form: $legal_form, member_id: $member_id, publication: $publication, order: $order);
     }
 
     /**
@@ -2013,7 +2013,7 @@ readonly class RestClient
     {
         $api = new Api\OrganisationsApi;
         $callback = [$api, 'v30OrganisationsMembershipsGet'];
-        return $this->depaginate($callback, $limit, $organisation_id, $member_id, $order);
+        return $this->depaginate($callback, $limit, organisation_id: $organisation_id, member_id: $member_id, order: $order);
     }
 
     /**
@@ -2076,7 +2076,7 @@ readonly class RestClient
     {
         $api = new Api\ProductFoldersApi;
         $callback = [$api, 'v30ProductFoldersRecursiveGet'];
-        return $this->depaginate($callback, $limit, $published, $parent_id, $order);
+        return $this->depaginate($callback, $limit, published: $published, parent_id: $parent_id, order: $order);
     }
 
     /**
@@ -2091,7 +2091,7 @@ readonly class RestClient
     {
         $api = new Api\ProductFoldersApi;
         $callback = [$api, 'v30ProductFoldersGet'];
-        return $this->depaginate($callback, $limit, $published, $parent_id, $order);
+        return $this->depaginate($callback, $limit, published: $published, parent_id: $parent_id, order: $order);
     }
 
     /**
@@ -2155,7 +2155,7 @@ readonly class RestClient
     {
         $api = new Api\ProductsApi;
         $callback = [$api, 'v30ProductsObjIdLogsGet'];
-        return $this->depaginate($callback, $limit, $obj_id, $author_id, $type, $order);
+        return $this->depaginate($callback, $limit, obj_id: $obj_id, author_id: $author_id, type: $type, order: $order);
     }
 
     /**
@@ -2222,7 +2222,7 @@ readonly class RestClient
     {
         $api = new Api\ProductsApi;
         $callback = [$api, 'v30ProductsGet'];
-        return $this->depaginate($callback, $limit, $published, $status, $folder_id, $order);
+        return $this->depaginate($callback, $limit, published: $published, status: $status, folder_id: $folder_id, order: $order);
     }
 
     /**
@@ -2286,7 +2286,7 @@ readonly class RestClient
     {
         $api = new Api\SaleInvoicesApi;
         $callback = [$api, 'v30SaleInvoicesObjIdLogsGet'];
-        return $this->depaginate($callback, $limit, $obj_id, $author_id, $type, $order);
+        return $this->depaginate($callback, $limit, obj_id: $obj_id, author_id: $author_id, type: $type, order: $order);
     }
 
     /**
@@ -2363,7 +2363,7 @@ readonly class RestClient
     {
         $api = new Api\SaleInvoicesApi;
         $callback = [$api, 'v30SaleInvoicesGet'];
-        return $this->depaginate($callback, $limit, $entity_id, $period_filter, $invoice_status, $invoice_num_reminders_send, $invoice_type, $category, $product_offer_id, $member_id, $collection_id, $use_direct_debit, $contribution_start, $contribution_end, $direct_debit_file_id, $order);
+        return $this->depaginate($callback, $limit, entity_id: $entity_id, period_filter: $period_filter, invoice_status: $invoice_status, invoice_num_reminders_send: $invoice_num_reminders_send, invoice_type: $invoice_type, category: $category, product_offer_id: $product_offer_id, member_id: $member_id, collection_id: $collection_id, use_direct_debit: $use_direct_debit, contribution_start: $contribution_start, contribution_end: $contribution_end, direct_debit_file_id: $direct_debit_file_id, order: $order);
     }
 
     /**
@@ -2485,7 +2485,7 @@ readonly class RestClient
     {
         $api = new Api\SaleInvoicesApi;
         $callback = [$api, 'v30SaleInvoicesObjIdItemsGet'];
-        return $this->depaginate($callback, $limit, $obj_id, $order);
+        return $this->depaginate($callback, $limit, obj_id: $obj_id, order: $order);
     }
 
     /**
@@ -2510,7 +2510,7 @@ readonly class RestClient
     {
         $api = new Api\SaleInvoicesApi;
         $callback = [$api, 'v30SaleInvoicesWorkflowsGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -2524,7 +2524,7 @@ readonly class RestClient
     {
         $api = new Api\StorageApi;
         $callback = [$api, 'v30StorageGet'];
-        return $this->depaginate($callback, $limit, $folder_id, $order);
+        return $this->depaginate($callback, $limit, folder_id: $folder_id, order: $order);
     }
 
     /**
@@ -2600,7 +2600,7 @@ readonly class RestClient
     {
         $api = new Api\StorageFoldersApi;
         $callback = [$api, 'v30StorageFoldersRecursiveGet'];
-        return $this->depaginate($callback, $limit, $published, $parent_id, $term, $order);
+        return $this->depaginate($callback, $limit, published: $published, parent_id: $parent_id, term: $term, order: $order);
     }
 
     /**
@@ -2616,7 +2616,7 @@ readonly class RestClient
     {
         $api = new Api\StorageFoldersApi;
         $callback = [$api, 'v30StorageFoldersGet'];
-        return $this->depaginate($callback, $limit, $published, $parent_id, $term, $order);
+        return $this->depaginate($callback, $limit, published: $published, parent_id: $parent_id, term: $term, order: $order);
     }
 
     /**
@@ -2689,7 +2689,7 @@ readonly class RestClient
     {
         $api = new Api\WebhooksApi;
         $callback = [$api, 'v30WebhooksGet'];
-        return $this->depaginate($callback, $limit, $order);
+        return $this->depaginate($callback, $limit, order: $order);
     }
 
     /**
@@ -2753,7 +2753,7 @@ readonly class RestClient
     {
         $api = new Api\WebhooksApi;
         $callback = [$api, 'v30WebhooksObjIdCallsGet'];
-        return $this->depaginate($callback, $limit, $obj_id, $period_filter, $status_code, $order);
+        return $this->depaginate($callback, $limit, obj_id: $obj_id, period_filter: $period_filter, status_code: $status_code, order: $order);
     }
 
     /**
@@ -2769,7 +2769,7 @@ readonly class RestClient
     {
         $api = new Api\WebpagesApi;
         $callback = [$api, 'v30WebpagesGet'];
-        return $this->depaginate($callback, $limit, $published, $website_id, $template_id, $order);
+        return $this->depaginate($callback, $limit, published: $published, website_id: $website_id, template_id: $template_id, order: $order);
     }
 
     /**
@@ -2796,7 +2796,7 @@ readonly class RestClient
     {
         $api = new Api\WebsitesApi;
         $callback = [$api, 'v30WebsitesGet'];
-        return $this->depaginate($callback, $limit, $published, $template_id, $order);
+        return $this->depaginate($callback, $limit, published: $published, template_id: $template_id, order: $order);
     }
 
     /**
@@ -2825,6 +2825,6 @@ readonly class RestClient
     {
         $api = new Api\WebsitesApi;
         $callback = [$api, 'v30WebsitesObjIdWebpagesGet'];
-        return $this->depaginate($callback, $limit, $obj_id, $published, $website_id, $template_id, $order);
+        return $this->depaginate($callback, $limit, obj_id: $obj_id, published: $published, website_id: $website_id, template_id: $template_id, order: $order);
     }
 }
